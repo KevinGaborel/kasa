@@ -1,0 +1,30 @@
+.title {
+    font-size: .9rem;
+    padding: 2px 11.51px;
+    background-color: #FF6060;
+    color: white; 
+    border-radius: 5px;
+    font-weight: 500;
+    line-height: 142.6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hide, .show{
+	color: #FF6060;
+    background-color: #F7F7F7;
+    border-radius: 0 0 5px 5px;
+    font-size: 12px;
+    line-height: 142.6%;
+    font-weight: 400;
+    margin-block-start: 0;
+    padding-top: 17.27px;
+    padding-bottom: 5px;
+    padding-left: 11.51px;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

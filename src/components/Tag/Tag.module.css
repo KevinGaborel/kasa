@@ -1,0 +1,13 @@
+.tag{
+    color: #FFFFFF;
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19.96px;
+}

@@ -1,0 +1,21 @@
+.footer{
+    height: 209px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 17.11px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    height: 39.44px;
+    width: 122px;
+}
+.reserved{
+    height: 46px;
+    display: flex;
+    align-items: flex-end;
+}

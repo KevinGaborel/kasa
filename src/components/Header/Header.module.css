@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 145px;
+    height: 47px;
+}
+.nav{
+    width: 140px;
+    height: 17px;
+}
+.liste{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.link{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17.11px;
+    color: #FF6060;
+}
+.linkNotHere{
+    text-decoration: none;
+}

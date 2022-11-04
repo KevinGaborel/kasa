@@ -1,5 +1,6 @@
 .background{
     position: relative;
+    margin-top: 20px;
 }
 .img, .filtre{
     border-radius: 10px;

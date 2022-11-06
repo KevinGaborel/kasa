@@ -10,8 +10,8 @@ function  Home() {
   console.log(datas);
   return (
     <main className={styles.main}>
-      <Imgbackground img={background} />
-        {datas.map((data) => <Thumb key={data.id} img={data.cover} link={'logement/' + data.id} >{data.title}</Thumb>)}
+      <Imgbackground img={background} text='Chez vous,partout et ailleurs' height="111" />
+      {datas.map((data) => <Thumb key={data.id} img={data.cover} link={'logement/' + data.id} >{data.title}</Thumb>)}
     </main>
   );
 }

@@ -2,10 +2,16 @@
     position: relative;
     margin-top: 20px;
 }
+.tall{
+    height: 223px;
+}
+.small{
+    height: 111px;
+}
 .img, .filtre{
     border-radius: 10px;
     width: 100%;
-    height: 111px;
+    height: 100%;
 }
 .filtre{
     background-color: black;

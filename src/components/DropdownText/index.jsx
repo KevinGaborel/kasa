@@ -8,10 +8,10 @@ function DropdownText({children, title}) {
   const [ showText, setShowText] = useState(false);
 
   return (
-    <div>
+    <div className={styles.DropdownText} >
 
       <div name="equipements" className={styles.title} onClick={() => showText === false ? setShowText(true) : setShowText(false)} >
-        <span>{title}</span>
+        <h3 className={styles.h3} >{title}</h3>
         <FontAwesomeIcon icon={showText === false ? faChevronDown : faChevronUp} className={styles.chevron} />
       </div>
 

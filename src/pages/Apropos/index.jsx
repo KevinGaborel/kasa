@@ -1,19 +1,38 @@
 import styles from './Apropos.module.css';
-import { Fragment } from 'react';
-import Tag from '../../components/Tag';
+import imgDesktop from '../../assets/a-propos.png';
+import imgPhone from '../../assets/a-propos-phone.png';
+import Imgbackground from '../../components/Imgbackground';
+import DropdownText from '../../components/DropdownText';
 
 function Apropos() {
-  const liste = ['Climatisation', 'Wi-fi', 'Cuisine', 'Espace de travail', 'Fer à repasser', 'Sèche-cheveux', 'Cintres'];
-  const text = `Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. 
-  Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Apropos parfait pour les voyageurs en solo et les voyageurs d'affaires. 
-  Vous êtes à1 station de la gare de l'est (7 minutes à pied).`
+  const isPhone = window.matchMedia("only screen and (max-width: 800px)").matches;
 
   return (
-    <Fragment>
-      <Tag>Tomate jaune ou rouge</Tag>
-      {text}
-      {liste.map((elt) => <li>{elt}</li>)}
-    </Fragment>
+    <main className={styles.main} >
+      <Imgbackground img={isPhone ? imgPhone : imgDesktop} text='' style={styles.imgBackground} />
+
+      <DropdownText title='Fiabilité'>
+        Les annonces postées sur Kasa garantissent une fiabilité totale. 
+        Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.
+      </DropdownText>
+
+      <DropdownText title='Respect' >
+        La bienveillance fait partie des valeurs fondatrices de Kasa. 
+        Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
+      </DropdownText>
+
+      <DropdownText title='Service' >
+        Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. 
+        N'hésitez pas à nous contacter si vous avez la moindre question.
+      </DropdownText>
+
+      <DropdownText title='Sécurité'>
+        La sécurité est la priorité de Kasa. 
+        Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. 
+        En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. 
+        Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
+      </DropdownText>
+    </main>
   );
 }
 

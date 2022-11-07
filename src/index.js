@@ -8,7 +8,7 @@ import {
 import './index.css';
 import Home from './pages/Home';
 import ErrorPage from "./pages/Error";
-import Logement from "./pages/Logement";
+import Logement, {loader as logementLoader} from "./pages/Logement";
 import Apropos from "./pages/Apropos";
 import Root from "./pages/Root";
 
@@ -25,12 +25,13 @@ const router = createBrowserRouter([
       {
         path: "/logement/:id",
         element: <Logement />,
+        loader: logementLoader,
       },
       {
         path: "/a-propos/",
         element: <Apropos />,
       }
-    ],
+    ]
   },
 ]);
 

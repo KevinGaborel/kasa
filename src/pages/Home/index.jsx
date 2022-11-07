@@ -1,6 +1,4 @@
 import styles from './Home.module.css';
-import { Fragment, useEffect } from 'react';
-import Tag from '../../components/Tag';
 import Thumb from '../../components/Thumb';
 import Imgbackground from '../../components/Imgbackground';
 import background from '../../assets/home.png';

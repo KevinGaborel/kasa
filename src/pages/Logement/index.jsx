@@ -4,10 +4,23 @@ import Tag from '../../components/Tag';
 import DropdownList from '../../components/DropdownList';
 import DropdownText from '../../components/DropdownText';
 import datas from '../../datas/datas.json';
+import Slideshow from '../../components/Slideshow';
 
+export async function loader({ request, params }) {
+  const id = await params.id;
+  const infos = datas.find((elt) => elt.id === id);
+
+  if (!infos) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Not Found",
+    });
+  }
+
+  return infos;
+}
 
 function Logement() {
-
   const tabPath = window.location.pathname.split('/');
   const id = tabPath[tabPath.length - 1];
   const infos = datas.find((elt) => elt.id === id);
@@ -20,11 +33,17 @@ function Logement() {
   Vous êtes à1 station de la gare de l'est (7 minutes à pied).`
 
   return (
-    <Fragment>
-      <Tag>Pote</Tag>
+    <main className={styles.main}>
+      <Slideshow listImg={infos.pictures} />
+      <h1>{infos.title}</h1>
+      <em>{infos.location}</em>
+      <div>
+      {infos.tags.map((tag) => <Tag>{tag}</Tag>)}
+      </div>
+      
       <DropdownList liste={liste} />
       <DropdownText title='Description' >{text}</DropdownText>
-    </Fragment>
+    </main>
   );
 }
 

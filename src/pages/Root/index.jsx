@@ -10,7 +10,6 @@ function Root() {
       <Outlet />
       <Footer />
       </>
-      
     );
   }
   

@@ -1,0 +1,22 @@
+.slideshow{
+    display: flex;
+    height: 255px;
+    position: relative;
+}
+.img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+.chevronL, .chevronR{
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    top: calc(50% - 12px);
+}
+.chevronL{
+    left: 5px;
+}
+.chevronR{
+    right: 5px;
+}

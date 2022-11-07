@@ -1,0 +1,15 @@
+.rating{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.star, .starEmpty{
+    font-size: 15px;
+}
+.star{
+    color: #FF6060;
+}
+.starEmpty{
+    color: #E3E3E3;
+}

@@ -5,6 +5,8 @@ import DropdownList from '../../components/DropdownList';
 import DropdownText from '../../components/DropdownText';
 import datas from '../../datas/datas.json';
 import Slideshow from '../../components/Slideshow';
+import Rating from '../../components/Rating';
+import Host from '../../components/Host';
 
 export async function loader({ request, params }) {
   const id = await params.id;
@@ -38,8 +40,10 @@ function Logement() {
       <h1>{infos.title}</h1>
       <em>{infos.location}</em>
       <div>
-      {infos.tags.map((tag) => <Tag>{tag}</Tag>)}
+      {infos.tags.map((tag, i) => <Tag key={i} >{tag}</Tag>)}
       </div>
+      <Rating score={infos.rating} />
+      <Host name={infos.host.name} img={infos.host.picture} />
       
       <DropdownList liste={liste} />
       <DropdownText title='Description' >{text}</DropdownText>

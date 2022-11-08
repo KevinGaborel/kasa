@@ -1,3 +1,27 @@
 .main{
-    margin: 20px;
+    margin: 20px 20px 100px 20px;
+    color: #FF6060;
+}
+.title, .em{
+    font-weight: 500;
+}
+.title{
+    font-size: 18px;
+    line-height: 25.67px;
+}
+.em{
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+}
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.host{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
 }

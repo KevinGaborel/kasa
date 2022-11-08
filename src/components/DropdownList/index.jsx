@@ -8,10 +8,10 @@ function DropdownList({liste}) {
   const [ showList, setShowList] = useState(false);
 
   return (
-    <div className='styles.dropdownList'>
+    <div className={styles.dropdownList}>
 
-      <div name="equipements" className={styles.title} onClick={() => showList === false ? setShowList(true) : setShowList(false)} >
-        <span>Équipements</span>
+      <div className={styles.title} onClick={() => showList === false ? setShowList(true) : setShowList(false)} >
+        <h3 className={styles.h3} >Équipements</h3>
         <FontAwesomeIcon icon={showList === false ? faChevronDown : faChevronUp} className={styles.chevron} />
       </div>
 

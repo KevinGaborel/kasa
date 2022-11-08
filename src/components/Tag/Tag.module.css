@@ -1,6 +1,5 @@
 .tag{
     color: #FFFFFF;
-    width: 115px;
     height: 25px;
     border-radius: 10px;
     background-color: #FF6060;
@@ -10,4 +9,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 19.96px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0 10px;
 }

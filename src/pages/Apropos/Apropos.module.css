@@ -4,3 +4,13 @@
 .imgBackground{
     height: 223px;
 }
+@media only screen and (min-width: 1000px) {
+    .main{
+        margin: 50px 100px;
+    }
+    .dropdowns{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 50px;
+    }
+}

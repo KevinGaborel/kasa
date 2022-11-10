@@ -24,3 +24,21 @@
     font-size: 14px;
     margin: 150px 0 0 0;
 }
+
+@media only screen and (min-width: 1000px) {
+    .main{
+        margin: 50px 100px;
+        height: 100%;
+    }
+    .title{
+        font-size: 288px;
+    }
+    .text{
+        font-size: 36px;
+    }
+    .link{
+        font-size: 18px;
+        margin: 150px 0 160px 0;
+
+    }
+}

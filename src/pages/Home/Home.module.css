@@ -1,3 +1,26 @@
 .main{
     margin: 20px;
 }
+@media only screen and (min-width: 500px) {
+    .cardContainer{
+        margin: 43px 0;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .main{
+        margin: 50px 100px;
+    }
+    .cardContainer{
+        background-color: #F6F6F6;
+        padding: 56px 50px;
+        border-radius: 25px;
+        column-gap: 50px;
+        row-gap: 50px;
+    }
+}

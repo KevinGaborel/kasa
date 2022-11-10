@@ -9,29 +9,31 @@ function Apropos() {
 
   return (
     <main className={styles.main} >
-      <Imgbackground img={isPhone ? imgPhone : imgDesktop} text='' style={styles.imgBackground} />
+      <Imgbackground img={isPhone ? imgPhone : imgDesktop} text=''/>
 
-      <DropdownText title='Fiabilité'>
-        Les annonces postées sur Kasa garantissent une fiabilité totale. 
-        Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.
-      </DropdownText>
+      <div className={styles.dropdowns} >
+        <DropdownText title='Fiabilité'>
+          Les annonces postées sur Kasa garantissent une fiabilité totale. 
+          Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.
+        </DropdownText>
 
-      <DropdownText title='Respect' >
-        La bienveillance fait partie des valeurs fondatrices de Kasa. 
-        Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
-      </DropdownText>
+        <DropdownText title='Respect' >
+          La bienveillance fait partie des valeurs fondatrices de Kasa. 
+          Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
+        </DropdownText>
 
-      <DropdownText title='Service' >
-        Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. 
-        N'hésitez pas à nous contacter si vous avez la moindre question.
-      </DropdownText>
+        <DropdownText title='Service' >
+          Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. 
+          N'hésitez pas à nous contacter si vous avez la moindre question.
+        </DropdownText>
 
-      <DropdownText title='Sécurité'>
-        La sécurité est la priorité de Kasa. 
-        Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. 
-        En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. 
-        Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
-      </DropdownText>
+        <DropdownText title='Sécurité'>
+          La sécurité est la priorité de Kasa. 
+          Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. 
+          En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. 
+          Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
+        </DropdownText>
+      </div>
     </main>
   );
 }

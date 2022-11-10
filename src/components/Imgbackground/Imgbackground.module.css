@@ -13,6 +13,9 @@
     width: 100%;
     height: 100%;
 }
+.img{
+    object-fit: cover;
+}
 .filtre{
     background-color: black;
     opacity: 0.3;
@@ -33,4 +36,23 @@
     bottom: 80.05%;
     margin-block-start: 0;
     margin-block-end: 0;
+}
+@media only screen and (min-width: 1000px) {
+    .small{
+        height: 223px;
+    }
+    .img, .filtre{
+        border-radius: 25px;
+    }
+    .text{
+        font-size: 48px;
+        line-height: 68.45px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

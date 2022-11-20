@@ -24,4 +24,7 @@
     .slideshow{
         height: 415px;
     }
+    .chevronL, .chevronR{
+        font-size: 80px;
+    }
 }

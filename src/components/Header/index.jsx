@@ -1,28 +1,12 @@
 import styles from './Header.module.css';
 import logo from '../../assets/logo.png';
-import { Link } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { NavLink } from "react-router-dom";
 
 function Header() {
-  const [ isHome, setIsHome] = useState(false);
-  const [ isAbout, setIsAbout] = useState(false);
 
-  function isUnderline(path){
-    if (path === '/'){
-      setIsHome(true);
-      setIsAbout(false);
-    } else if (path === '/a-propos'){
-      setIsAbout(true);
-      setIsHome(false);
-    } else{
-      setIsAbout(false);
-      setIsHome(false);
-    }
-  }
-
-  useEffect(()=>{
-    isUnderline(window.location.pathname)
-  }, [isAbout, isHome]);
+  let activeStyle = {
+    textDecoration: "underline",
+  };
 
   return (
 
@@ -31,10 +15,10 @@ function Header() {
       <nav className={styles.nav} >
         <ul className={styles.liste} >
           <li>
-            <Link to={`/`} className={`${styles.link} ${!isHome ? styles.linkNotHere : ''}`} onClick={() => setIsHome(true)} >ACCUEIL</Link>
+            <NavLink to={`/`} className={styles.link} style={({ isActive }) => isActive ? activeStyle : undefined} >ACCUEIL</NavLink>
           </li>
           <li> 
-            <Link to={`/a-propos`} className={`${styles.link} ${!isAbout ? styles.linkNotHere : ''}`}  onClick={() => setIsAbout(true)} >A PROPOS</Link>
+            <NavLink to={`/a-propos`} style={({ isActive }) => isActive ? activeStyle : undefined} className={styles.link} >A PROPOS</NavLink>
           </li>
         </ul>
       </nav>

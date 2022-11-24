@@ -16,8 +16,6 @@ function Slideshow({listImg}) {
     }
   }
 
-  console.log(listImg, index);
-
   useEffect(() => {
     changeImage(index);
   }, [index]);

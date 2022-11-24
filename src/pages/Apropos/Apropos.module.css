@@ -4,6 +4,12 @@
 .imgBackground{
     height: 223px;
 }
+.paragraph{
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
 @media only screen and (min-width: 1000px) {
     .main{
         margin: 50px 100px;

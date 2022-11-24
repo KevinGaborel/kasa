@@ -1,8 +1,6 @@
 import styles from './Logement.module.css';
-import { Fragment } from 'react';
 import Tag from '../../components/Tag';
-import DropdownList from '../../components/DropdownList';
-import DropdownText from '../../components/DropdownText';
+import Dropdown from '../../components/Dropdown';
 import datas from '../../datas/datas.json';
 import Slideshow from '../../components/Slideshow';
 import Rating from '../../components/Rating';
@@ -23,6 +21,7 @@ export async function loader({ request, params }) {
 }
 
 function Logement() {
+
   const tabPath = window.location.pathname.split('/');
   const id = tabPath[tabPath.length - 1];
   const infos = datas.find((elt) => elt.id === id);
@@ -50,8 +49,19 @@ function Logement() {
 
       </div>
       
-      <DropdownText title='Description' >{infos.description}</DropdownText>
-      <DropdownList liste={infos.equipments} />
+      <div className={styles.dropDownContainer}>
+        <Dropdown title='Description' >
+          <p className={styles.paragraph}>
+            {infos.description}
+          </p>
+        </Dropdown>
+        <Dropdown title="Équipements" >
+          <ul className={styles.list}>
+          {infos.equipments.map((eltListe, nb) => <li className={styles.eltListe} key={nb} value={eltListe} >{eltListe}</li>)}
+          </ul>
+        </Dropdown>
+      </div>
+
     </main>
   );
 }
